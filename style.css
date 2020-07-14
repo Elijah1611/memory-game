@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Expletus Sans", "Franklin Gothic Medium", Arial, sans-serif;
+}
+
+h1 {
+	height: 10vh;
+	font-size: 3.5rem;
+	margin-top: 10px;
+	text-align: center;
+	text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+	color: #4a00e0;
+}
+
+#game {
+	height: 85vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#game .gameover {
+	position: absolute;
+	font-size: 10rem;
+	text-align: center;
+	color: white;
+	padding: 50px;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 20px;
+}
+
+#game .card {
+	border-radius: 20px;
+	min-width: 17%;
+	height: 400px;
+	margin: 10px;
+	font-size: 8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 1px 10px 15px -6px #000;
+}
+
+#game .card:hover {
+	cursor: pointer;
+}
+
+.card span {
+	transform: translateZ(25px);
+	pointer-events: none;
+	background-color: transparent;
+	backface-visibility: hidden;
+	user-select: none;
+}
+
+.progress {
+	width: 100%;
+	padding: 4px;
+	background-color: rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+
+.bar {
+	width: 0%;
+	height: 20px;
+	background: linear-gradient(45deg, #8e2de2, #4a00e0);
+	text-align: center;
+	transition: all 1s;
+	border-radius: 20px;
+}
+
+.progress span {
+	color: white;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 50%;
+	margin-top: 4px;
+	font-family: "Franklin Gothic Medium", Arial, sans-serif;
+	text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.no-click {
+	pointer-events: none;
+}
+
+.orange {
+	background: linear-gradient(45deg, #f12711, #f5af19);
+	color: white;
+	text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.green {
+	background: linear-gradient(45deg, #56ab2f, #a8e063);
+}
+
+.red {
+	background: linear-gradient(45deg, #f12711, #a12416);
+}
+
+.blue {
+	background: linear-gradient(45deg, #00c6ff, #0072ff);
+}
+
+.purple {
+	background: linear-gradient(45deg, #232526, #414345);
+}
+
+.back {
+	background: linear-gradient(45deg, #8e2de2, #4a00e0);
+	transform: rotateY(180deg);
+}
